@@ -36,6 +36,13 @@
     button.sbros:hover {
       background: #555;
     }
+    /* Стиль для кнопки "×2" — зелёный, чтобы тоже выделялась */
+    button.umnozh {
+      background: #2ea44f;
+    }
+    button.umnozh:hover {
+      background: #22853e;
+    }
   </style>
 </head>
 <body>
@@ -48,6 +55,9 @@
 
   <!-- Вторая кнопка — сбрасывает счётчик на 0 -->
   <button class="sbros" onclick="sbrosit()">Сбросить</button>
+
+  <!-- Третья кнопка — умножает текущее число на 2 -->
+  <button class="umnozh" onclick="udvoit()">×2</button>
 
   <script>
     // Заводим переменную (коробочку), в которой храним число
@@ -63,6 +73,12 @@
     function sbrosit() {
       schet = 0;                                         // обнуляем число
       document.getElementById("chislo").innerText = schet; // показываем 0 на странице
+    }
+
+    // Эта функция запускается при нажатии на кнопку "×2"
+    function udvoit() {
+      schet = schet * 2;                                 // умножаем число на 2
+      document.getElementById("chislo").innerText = schet; // показываем результат на странице
     }
   </script>
 
